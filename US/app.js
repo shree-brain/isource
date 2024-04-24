@@ -12,9 +12,15 @@ $(function() {
     $(form).submit(function(e) {
         // Stop the browser from submitting the form.
         e.preventDefault();
+        const recaptcha = $('#g-recaptcha-response').val();
         const email = $('#email').val();
+
         if (IsEmail(email) === false){
             $('#form-messages').text("Entered Email is not Valid!!");
+            $('#form-messages').css("color", "red");
+            return false;
+        }else if (ReCaptcha(recaptcha) === false){
+            $('#form-messages').text("Please Fill ReCaptcha!!");
             $('#form-messages').css("color", "red");
             return false;
         }else{
@@ -24,7 +30,7 @@ $(function() {
         // Submit the form using AJAX.
         $.ajax({
             type: 'POST',
-            url: $(form).attr('action'),
+            url: '/contact.php',
             data: formData
         })
         .done(function(response) {
@@ -67,6 +73,14 @@ function IsEmail(email) {
         return false;
     }
     else {
+        return true;
+    }
+}
+
+function ReCaptcha(recaptcha){
+    if(recaptcha.length === 0){
+        return false;
+    }else{
         return true;
     }
 }
