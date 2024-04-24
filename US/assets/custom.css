@@ -1,0 +1,69 @@
+.header-menu-area4.header-fixed .header-menu-fluid {
+    background-color: #e0efee;
+}
+
+.header-menu-area4.header-fixed .header-menu-fluid .logo-box a img {
+    height: 60px;
+}
+
+.header-menu-area4.header-fixed .menu-content {
+    height: 80px;
+}
+
+.header-menu-area4.header-fixed .menu-content .menu-wrapper .main-menu ul li:hover .dropdown-menu-item {
+    top: 48px;
+}
+
+.header-menu-fluid .menu-content .menu-wrapper .main-menu ul li:hover .dropdown-menu-item {
+    top: 52px;
+}
+
+.header-menu-fluid .logo-box a img {
+    height:72px;
+}
+
+.home-page-4 .banner-item-wrap:after {
+    background-color: #234240;
+}
+
+.info-body .service__btn {
+    color: #2e3d62;
+    text-transform: capitalize;
+    font-weight: 500;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.info-body .service__btn:hover {
+    color: #ea4749;
+}
+
+img.offerings {
+    width:100%;
+}
+
+/*
+img.img__item {
+    height:100%;
+}*/
+
+.image-gallery-wrap .image-gallery-item a img {
+    width:100%; height:200px;
+    object-fit:cover;
+}
+
+@media (max-width: 425px) {
+    
+    .header-menu-area .menu-content {
+        padding-top: 12px;
+        padding-bottom: 15px;
+    }
+    
+    .header-menu-area .menu-content .menu-wrapper .logo-right-button .side-menu-open {
+        margin-top: -50px;
+    }
+    
+}
